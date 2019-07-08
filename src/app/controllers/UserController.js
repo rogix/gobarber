@@ -1,3 +1,4 @@
+import { async } from 'rxjs/internal/scheduler/async';
 import User from '../models/User';
 
 class UserController {
@@ -15,6 +16,10 @@ class UserController {
       email,
       provider,
     });
+  }
+
+  async update(req, res) {
+    return res.json({ ok: true });
   }
 }
 
